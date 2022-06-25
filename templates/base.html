@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- LINK DATATABLES -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_main.css') }}" />
+    
+    <!-- LINK FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+      <!-- Template Main CSS File -->
+  <link href="../static/assets/css/style.css" rel="stylesheet">
+    {% block script_css %}{% endblock script_css %}
+
+    <script>
+        $(document).ready(function () {
+            $('#product-table').DataTable({
+                responsive: true,
+                bAutoWidth: false,
+                aoColumns: [
+                    {
+                        sWidth: '3%',
+                    },
+                    {
+                        sWidth: '20%',
+                    },
+                    {
+                        sWidth: '10%',
+                    },
+                    {
+                        sWidth: '10%',
+                    },
+                    {
+                        sWidth: '10%',
+                    },
+                    {
+                        sWidth: '5%',
+                    },
+                ],
+            });
+
+            $('#session-table').DataTable({
+                responsive: true,
+                bAutoWidth: false,
+                aoColumns: [
+                    {
+                        sWidth: '3%',
+                    },
+                    {
+                        sWidth: '3%',
+                    },
+                    {
+                        sWidth: '3%',
+                    },
+                    {
+                        sWidth: '10%',
+                    },
+                    {
+                        sWidth: '35%',
+                    },
+                    {
+                        sWidth: '10%',
+                    },
+                ],
+            });
+            $('#transaction-table').DataTable({
+                responsive: true,
+                bAutoWidth: false,
+                aoColumns: [
+                    {
+                        sWidth: '3%',
+                    },
+                    {
+                        sWidth: '3%',
+                    },
+                    {
+                        sWidth: '15%',
+                    },
+                    {
+                        sWidth: '15%',
+                    },
+                    {
+                        sWidth: '5%',
+                    },
+                    {
+                        sWidth: '25%',
+                    },
+                    {
+                        sWidth: '3%',
+                    },
+                ],
+            });
+        });
+    </script>
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+
+<body>
+    <header id="header" style="border-radius:0px 0px 16px 16px;" class="static-top">
+    <div class="container d-flex align-items-center">
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/#project">Project Task</a></li>
+          <li><a class="nav-link scrollto" href="/#tools">Tools</a></li>
+          <li><a class="nav-link scrollto" href="/#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="/products">Products</a></li>
+          <li><a class="nav-link scrollto" href="/sessiondata">Session Data</a></li>
+          <li><a class="nav-link scrollto" href="/transactiondata">Transaction Data</a></li>
+          <li><a class="nav-link scrollto" href="/membersearch">Member Search</a></li>
+          <li class="dropdown"><a href="#"><span>Reporting</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/reporting/contributor_vs_profit">Contributor VS Profit</a></li>
+              <li><a href="/reporting/user_vs_profit">User VS Profit</a></li>
+              <li><a href="/reporting/most_exp_tsc">Most Expensive Transaction</a></li>
+              <li><a href="/reporting/most_clicked_product">Most Clicked Product</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+    {% block content %}{% endblock content %}
+
+</body>
+
+</html>

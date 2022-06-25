@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Products Data
+{% endblock title %}
+
+{% block content %}
+<div class="container my-5">
+    <h4>Transaction Data</h4>
+
+    <table id="transaction-table" class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Tsc ID</th>
+                <th scope="col">User ID</th>
+                <th scope="col">User Name</th>
+                <th scope="col">Timestamp</th>
+                <th scope="col">Product ID</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Qty</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in tdata %}
+            <tr>
+                <th scope="row">{{ record[0] }}</th>
+                <td>{{ record[1] }}</td>
+                <td>{{ record[2] }}</td>
+                <td>{{ record[3] }}</td>
+                <td>{{ record[4] }}</td>
+                <td>{{ record[5] }}</td>
+                <td>{{ record[6] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

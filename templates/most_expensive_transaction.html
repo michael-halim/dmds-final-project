@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block script_css %}
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    {{ charts_init }}
+{% endblock script_css %}
+{% block title %}
+Reporting
+{% endblock title %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-2"></div>
+        {{ charts.most_exp_tsc }}
+        <div class="col-2"></div>
+    </div>
+
+    {% set id_count = namespace(value=1) %}
+    {% set column = namespace(value=1) %}
+    {% for user in userlist %}
+    {% if column.value == 1 %}
+    <div class="row my-5">
+        {% endif %}
+        <div class="col-sm-4 my-2">
+            <div class="card glass" id="user-{{id_count.value}}">
+                <div class="card-body">
+                    <h4>Username : {{user[0][0]}}</h4>
+                    {% for record in user %}
+                        <h6><b>{{record[2]}}</b></h6>
+                        <h6>{{record[3]}}</h6>
+                        <span>{{"Rp. {:,.2f}".format(record[4])}} x {{record[5]}} qty</span>
+                        <br><br>
+                    {% endfor %}
+                </div>
+                {% set id_count.value = id_count.value + 1 %}
+            </div>
+        </div>
+        {% set column.value = column.value + 1 %}
+        {% if column == 3 %}
+    </div>
+    {% set column.value = 1 %}
+    {% endif %}
+    {% endfor %}
+
+</div>
+{% endblock content %}

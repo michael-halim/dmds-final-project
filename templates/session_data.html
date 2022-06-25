@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Products Data
+{% endblock title %}
+
+{% block content %}
+<div class="container my-5">
+    <h4>Session Data</h4>
+
+    <table id="session-table" class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Session ID</th>
+                <th scope="col">User ID</th>
+                <th scope="col">Timestamp</th>
+                <th scope="col">Action</th>
+                <th scope="col">Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in sessionlist %}
+            <tr>
+                <th scope="row">{{ record[0] }}</th>
+                <td>{{ record[1] }}</td>
+                <td>{{ record[2] }}</td>
+                <td>{{ record[3] }}</td>
+                <td>{{ record[4] }}</td>
+                <td>{{ record[5] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Latihan Neo4j
+{% endblock title %}
+
+{% block content %}
+<div class="container" style="margin-top:100px;">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card glass">
+                <h3 style="margin: 15px; padding: 5px;">Search Relations</h3>
+                <div class="card-body">
+                    <div class="select">
+                        <form method="post" action="/get-member-relations/">
+                            <select class="form-select" name="names" required>
+                                {% for name in member_names %}
+                                <option value="{{name}}">{{name}}</option>
+                                {% endfor %}
+                            </select>
+                            <br><br>
+                            <input type="submit" class="btn btn-primary" id="submitbutton" name="submit" value="Search Relation">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

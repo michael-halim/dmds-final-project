@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Reporting
+{% endblock title %}
+
+{% block content %}
+
+<div class="container my-5">
+    <h4>Reporting</h4>
+    <form action="/reporting/contributor_vs_profit" id="btn">
+        <button class="btn btn-secondary">Contributor VS Profit</button>
+    </form>
+    <form action="/reporting/user_vs_profit" id="btn">
+        <button class="btn btn-secondary">User VS Profit</button>
+    </form>
+    <form action="/reporting/most_exp_tsc" id="btn">
+        <button class="btn btn-secondary">Most Expensive Transaction</button>
+    </form>
+    <form action="/reporting/most_clicked_product" id="btn">
+        <button class="btn btn-secondary">Most Clicked Product</button>
+    </form>
+</div>
+{% endblock content %}

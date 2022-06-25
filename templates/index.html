@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% block title %}
+    Main Page
+{% endblock title %}
+
+
+{% block script_css %}
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+{% endblock script_css %}
+
+{% block content %}
+
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1 class="title-gradient" style="">Data Modeling for Data Science Project</h1>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="../static/assets/img/hero-img.png" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <main id="main" class="mt-5 mb-5">
+    <!-- ======= About Us Section ======= -->
+    <section id="project" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Project Task</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6 offset-lg-3">
+            <p>
+              Develop an OLAP app that employs at least 2 databases to store and retrieve data
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Define at least 3 (three) problems addressed by the app</li>
+              <li><i class="ri-check-double-line"></i> One of the DBs must be a NoSQL (e.g., Redis, MongoDB,
+              Neo4j, etc.)</li>
+              <li><i class="ri-check-double-line"></i> The DBs comprise at least 5 (five) entities / tables / docs</li>
+              <li><i class="ri-check-double-line"></i> Make sure that the DBs are employed correctly according
+              to their characteristics</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="tools" class="services section-bg mt-5">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Tools</h2>
+          <p>These are the tools used in this project</p>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <img src="../static/assets/img/mongodb.png" class="img-fluid" alt="" >
+              <p style="margin-top:20px;"><b>Save Data Product</b></p>
+              <p>Used to save and retrieve unstructured data of products</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <img src="../static/assets/img/neo4j.png" class="img-fluid" alt="" >
+              <p><b>Save User Data</b></p>
+              <p>Used to save and retrieve user data that has child-parent relationship</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <img src="../static/assets/img/sqlite.png" class="img-fluid" alt="">
+              <p style="margin-top:40px;"><b>Data Transaction and Log</b></p>
+              <p>Used to save and retrieve Transaction Data and Log</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box">
+              <img src="../static/assets/img/flask.png" class="img-fluid" alt="" >
+              <p style="margin-top:35px;"><b>Framework</b></p>
+              <p>Used to make fast, easy and lightweight website</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+              <div class="pic"><img src="../static/assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Yunus Marsetio</h4>
+                <span>C14190065</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
+              <div class="pic"><img src="../static/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Peter Yudhistira</h4>
+                <span>C14190067</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 offset-lg-3">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pic"><img src="../static/assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Michael Halim</h4>
+                <span>C14190119</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <!-- Vendor JS Files -->
+  <script src="../static/assets/vendor/aos/aos.js"></script>
+  <script src="../static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/assets/js/main.js"></script>
+{% endblock content %}

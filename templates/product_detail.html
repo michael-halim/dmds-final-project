@@ -1,0 +1,51 @@
+{% extends 'base.html' %} 
+
+{% block title %}
+    Detail Product 
+{% endblock title %}
+
+{% block content %}
+<div class="container" style="margin-top:100px;">
+    <div class="glass">
+        
+        <table style="margin-left: 25px; max-width:200px;">
+            <tr>
+                <td colspan="2"><b>========================================================================</b></td>
+            </tr>
+            <tr>
+                <td colspan="2"><b>Detail Produk</b></td>
+            </tr>
+            <tr>
+                <td colspan="2"><b>========================================================================</b></td>
+            </tr>
+        {% set print = False %}
+        {% for record in detail_product %}
+            {% for key in record%}
+                <tr>
+                    <td style="padding: 5px;">{{key}}</td>
+                    
+                    <td style="padding: 5px; max-width: 160px;">
+                        {% if key == 'Harga' %}
+                            {{ "Rp. {:,.2f}".format(record[key]) }}
+                        {% else %}
+                            {{record[key]}}
+                        {% endif %}
+                    </td>
+                </tr>
+                {% if key == 'Material' or key == 'Berat' %}
+                    <tr>
+                        <td colspan="2"><b>========================================================================</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>{% if key == 'Material' %}Spesifikasi {% else %} Lainnya {% endif %}</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>========================================================================</b></td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock content %}
