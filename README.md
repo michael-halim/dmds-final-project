@@ -1,6 +1,6 @@
 # Data Modelling for Data Science Project
 
-## The main task in this project is to uses 3 different databases and make analysis from the data
+#### The main task in this project is to uses 3 different databases and make analysis from the data
 
 ## This Project Uses 3 Databases
 - [SQLite3] - SQLite for Transactional and Log Data
