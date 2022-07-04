@@ -1,3 +1,5 @@
+# Readme
+
 Proyek menggunakan 3 database
 data untuk transaksi tersimpan di root folder 'session_database.db' menggunakan SQLite (SQL)
 data untuk produk tersimpan dalam 'data generator/products-with-price.json' (MongoDB)
