@@ -18,8 +18,8 @@
 -- Put 'data generator/neo4j query.txt' query block by block separated by enter
 - Main Program
 -- Change the Neo4J credential in .env
--- Install python-dotenv ```sh pip install python-dotenv ```
--- In CLI  ```sh python flaskapp.py ```
+-- Install python-dotenv ```pip install python-dotenv ```
+-- In CLI  ```python flaskapp.py ```
 -- Enjoy
 
 ## Data Origin
